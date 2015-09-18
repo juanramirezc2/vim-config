@@ -54,6 +54,9 @@ NeoBundle 'Shougo/vimproc', {
 " Some support functions used by delimitmate, and snipmate
 NeoBundle 'vim-scripts/tlib'
 
+"emmet vim config 
+NeoBundle 'mattn/emmet-vim'
+
 " Improve bookmarks in vim
 " Allow word for bookmark marks, and nice quickfix window with bookmark list
 " NeoBundle 'AndrewRadev/simple_bookmarks.vim'
@@ -69,6 +72,9 @@ NeoBundle 'Shougo/neosnippet'
 " Default snippets
 NeoBundle 'honza/vim-snippets'
 
+" Anderson
+NeoBundle 'gilgigilgil/anderson.vim'
+
 " Dirr diff
 NeoBundle 'vim-scripts/DirDiff.vim'
 
@@ -79,6 +85,9 @@ NeoBundle 'altercation/vim-colors-solarized'
 " and add smart cursor positioning inside it,
 NeoBundle 'Raimondi/delimitMate'
 
+" easy motion plugin 
+NeoBundle 'easymotion/vim-easymotion'
+
 " Add code static check on write
 " need to be properly configured.
 " I just enable it, with default config,
@@ -86,20 +95,20 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/syntastic'
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
-if !executable("jshint")
+if !executable("eslint")
     "let g:syntastic_jshint_exec = '~/.vim/node_modules/.bin/jshint'
     let g:syntastic_javascript_jshint_exec = '~/.vim/node_modules/.bin/jshint'
     if isNpmInstalled && !executable(expand(g:syntastic_javascript_jshint_exec))
         silent ! echo 'Installing jshint' && npm --prefix ~/.vim/ install jshint
     endif
 endif
-" Path to csslint if it not installed globally, then use local installation
-if !executable("csslint")
-    let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
-    if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
-        silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
-    endif
-endif
+"Disabled Path to csslint if it not installed globally, then use local installation
+"if !executable("csslint")
+"    let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
+"    if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
+"        silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
+"    endif
+"endif
 
 " Great file system explorer, it appears when you open dir in vim
 " Allow modification of dir, and may other things
@@ -232,7 +241,7 @@ NeoBundleCheck
 " Unite
 
 " Set unite window height
-let g:unite_winheight = 10
+let g:unite_winheight = 20
 
 " Start unite in insert mode by default
 let g:unite_enable_start_insert = 1
@@ -280,6 +289,15 @@ nnoremap <silent><leader>; :Unite file_rec/async:! -buffer-name=files -start-ins
 nnoremap <silent><leader>/ :Unite grep:. -no-start-insert -no-quit -keep-focus -wrap<CR>
 
 
+"-------------------------
+" Easy motion
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 "-------------------------
 " NERDTree
@@ -514,7 +532,7 @@ call arpeggio#map('i', '', 0, 'jk', '<ESC>')
 " Colorscheme
 
 " Use solarized colorscheme
-colorscheme birds-of-paradise
+colorscheme anderson
 
 " Setting up light color scheme
 set background=dark
@@ -769,7 +787,10 @@ vmap <leader>s :s//<left>
 
 " Moving between splits
 nmap <leader>w <C-w>w
-
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 "--------------------------------------------------
 " Aautocmd
 
