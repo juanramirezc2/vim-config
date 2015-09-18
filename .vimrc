@@ -95,7 +95,7 @@ NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 " Install jshint and csslint for syntastic
 " Path to jshint if it not installed globally, then use local installation
-if !executable("eslint")
+if !executable("jshint")
     "let g:syntastic_jshint_exec = '~/.vim/node_modules/.bin/jshint'
     let g:syntastic_javascript_jshint_exec = '~/.vim/node_modules/.bin/jshint'
     if isNpmInstalled && !executable(expand(g:syntastic_javascript_jshint_exec))
