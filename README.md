@@ -51,8 +51,6 @@ Provides smart autocompletion.
 #### Integration with git &mdash; [Fugitive](https://github.com/tpope/vim-fugitive)
 Provides full integration wit git.
 
-#### Advanced javascript features &mdash; [Tern for Vim](https://github.com/marijnh/tern_for_vim)
-Provides advanced javascript features like Smart variable rename, Find variable references, and Go to variable. If you use `.ternconf` &mdash; it'll improve autocompletion in your js files as well.
 #### Improved editing
 * [DelimitMate](https://github.com/Raimondi/delimitMate) &mdash; provides automatic closing of quotes, parenthesis, brackets, etc., also has some other related features that will make your time in insert mode a little bit easier.
 * [tcomment](https://github.com/tomtom/tcomment_vim) &mdash; tcomment provides easy-to-use, file-type sensible comments for Vim. It can handle embedded syntax.
@@ -108,11 +106,12 @@ in the User Guide.
 YCM comes with sane defaults for its options, but you still may want to take a
 look at what's available for configuration. There are a few interesting options
 that are conservatively turned off by default that you may want to turn on.
-### ternJS
+
+### Tern for Vim &mdash; [Tern for Vim](https://github.com/marijnh/tern_for_vim)
+Provides advanced javascript features like Smart variable rename, Find variable references, and Go to variable. If you use `.ternconf` &mdash; it'll improve autocompletion in your js files as well.
 Tern consists of several components. Depending on what you are trying to do with it,
-you will be interested in a different layer. At the very top are the editor plugins. 
-These talk to a Tern server, which is implemented on top of the server module, which 
-uses the inference engine to do the actual type inference.
+
+execute this in the command line in order to get tern for vim up and running
 
 ``cd ~/.vim/bundle/tern_for_vim
 npm install ``
