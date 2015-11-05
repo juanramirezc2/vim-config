@@ -4,13 +4,16 @@
 
 #### Easy installation
 
+#### Fonts 
+
+some shell fonts are needed to help a beauty configuration
+please install the font located in the  cli-fonts folder
+
+ DroidSansMonoDotted
+
 You just need to place `.vimrc` in your home directory, and that's all. All
 plugins and dependencies will install automatically upon first vim launch.
 
-To install just clone the repo, and place symlink to .vimrc in your home directory. E.g.:
-```bash
- git clone https://github.com/adictovirtual/vim-config.git && ln -s ~/vim-config/.vimrc ~/
-```
 [NPM](http://en.wikipedia.org/wiki/Npm_(software)) is required for some features.
 
 ## You Complete Me plugin  installation
