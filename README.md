@@ -19,10 +19,6 @@ lower/upper-case in the search pattern, it'll be case-sensitive.
 #### Quick plugin install &mdash; [Neobundle](https://github.com/Shougo/neobundle.vim)
 It's a bundler, which helps to install other bundles. It's quite smart and works better then
 vundle.
-#### Color Scheme &mdash; [Solarized](https://github.com/altercation/vim-colors-solarized)
-A popular light/dark color scheme.
-
-![Screen](https://raw.githubusercontent.com/altercation/solarized/master/img/solarized-vim.png)
 #### Snippets &mdash; [Neosnippet](https://github.com/Shougo/neosnippet.vim) & [vim-snippets](https://github.com/honza/vim-snippets)
 Neosnippet is a snippet engine itself, and Vim-snippets &mdash; it’s default snippets collection.
 
@@ -72,7 +68,7 @@ To install just clone the repo, and place symlink to .vimrc in your home directo
 ```
 [NPM](http://en.wikipedia.org/wiki/Npm_(software)) is required for some features.
 
-## You Complete Me plugin instalation
+## You Complete Me plugin  installation
 **Remember:** YCM is a plugin with a compiled component. If you **update** YCM
 using Vundle and the ycm_support_libs library APIs have changed (happens
 rarely), YCM will notify you to recompile it. You should then rerun the install
